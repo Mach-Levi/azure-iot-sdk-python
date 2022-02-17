@@ -59,7 +59,7 @@ jobs:
 
     - script: |
         cd $(Build.SourcesDirectory)/device_e2e
-        pytest --transport=$(transport) --junitxml=junit/TEST-python-repeated-e2e.xml -o junit_suite_name="$(Agent.JobName)" -m "not stress" -count=5 repeat-scope=session
+        pytest --transport=$(transport) --junitxml=junit/TEST-python-repeated-e2e.xml -o junit_suite_name="$(Agent.JobName)" -m "not stress" --count=5 --repeat-scope=session
       displayName: 'Device Client Repeated E2E Connection String'
       env:
         IOTHUB_E2E_IOTHUB_CONNECTION_STRING: $(IOTHUB-E2E-CONNECTION-STRING)
