@@ -9,3 +9,4 @@ flake8
 azure-iothub-provisioningserviceclient >= 1.2.0  # Only needed for end to end tests for DPS
 azure-eventhub # for device_e2e
 psutil # for device_e2e
+pytest-repeat # for device_e2e
